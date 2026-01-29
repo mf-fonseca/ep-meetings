@@ -15,7 +15,7 @@ dir_output_base: "./meetings_metadata"
 # folder of save all decision in a single EP Meeting
 folder_output_decision: "decision"
 # YYYYMM filter
-filter_decision: MTG-PL-(2025-10)
+--filter_decision: MTG-PL-(2025-10)
 # Output result in csv file
 dir_output_file: "./result/votes_decisions_meps.csv"
 # Log
