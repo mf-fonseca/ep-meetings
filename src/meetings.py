@@ -79,7 +79,7 @@ class api_meetings_ep:
             
         """ Show the list of the MEP meetings cannot possible download. """
         if len(self.list_url_not_download) > 0:
-            self.log.info(f"Warning: Downloads failed: {',\n'.join(self.list_url_not_download)}")
+           self.log.info("Warning: Downloads failed: " + ",\n".join(self.list_url_not_download))
         
     def __get_meetings(self):
 
@@ -89,7 +89,8 @@ class api_meetings_ep:
         [self.__download_meeting(meeting_year) for meeting_year in self.config["years"]]
         """ Show the list of the MEP meetings cannot possible download. """
         if len(self.list_url_not_download) > 0:
-            self.log.info(f"Warning: Downloads failed: {',\n'.join(self.list_url_not_download)}")
+           self.log.info("Warning: Downloads failed: " + ",\n".join(self.list_url_not_download))
+
         
         print("The meetings download is end. ")
         self.log.info("The meetings download is end. ")

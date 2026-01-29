@@ -107,4 +107,7 @@ def evalue_condition(pattern:str,filename:str) -> bool:
     return re.match(pattern,filename)
 
 def abort_process():
-    os.abort()
+    import logging
+    logging.getLogger(__name__).warning("Process was aborted due to a download error, but continuing...")
+    pass
+

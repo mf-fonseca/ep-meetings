@@ -72,7 +72,7 @@ class meps_decision:
             """ Section of traitement data """
             # Get Englis label
             dict_label = dfOperation["activity_label"].values[0]
-            dfOperation["activity_label"] = dict_label["en"]
+            dfOperation["activity_label"] = dict_label.get("en", dict_label.get("fr", "Unknown label"))
             # Get the result of convert all list column to rows
             dfVotes = self.__convert_votes_in_table(dfOperation)
             # Get the number of row in dataframe report
